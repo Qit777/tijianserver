@@ -1,0 +1,21 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /tijian
+
+logging:
+  level:
+    org.springframework: info
+    com.jiancode.tijian.mapper: info
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tijian?characterEncoding=utf-8
+    username: root
+    password: mysql
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.jiancode.tijian.po, com.jiancode.tijian.dto
+
